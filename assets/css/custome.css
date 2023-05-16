@@ -1,0 +1,191 @@
+ .floating-menu {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .floating-menu a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+ }
+
+ .floating-menu a:hover {
+    background-color: #128C7E;
+ }
+
+ .twitter {
+    background-color: #1DA1F2; /* WhatsApp green */
+ }
+
+ .facebook {
+    background-color: #3B5998; /* Facebook blue */
+ }
+
+ .instagram {
+    background-color: #E1306C; /* Instagram pink */
+ }
+
+ .linkedin {
+   background-color: #0077B5; /* Instagram pink */
+}
+
+ .floating-menu .fab {
+    font-size: 1.5rem;
+ }
+
+ .blink {
+   animation: blink-animation 1s infinite;
+ }
+
+ @keyframes blink-animation {
+   0% {
+     color: #000;
+   }
+   50% {
+     color: #fff;
+   }
+   100% {
+     color: #000;
+   }
+ }
+
+ 
+ .disappearing-text {
+   animation: disappearing-text 3s ease-in-out infinite;
+   }
+
+   @keyframes disappearing-text {
+   0% {
+        opacity: 1;
+      }
+   50% {
+        opacity: 0;
+      }
+   100% {
+        opacity: 1;
+       }
+}
+
+
+
+
+/* new chat button css */
+
+body {
+   background-color: #eee
+}
+
+.chat-btn {
+   position: fixed;
+   /* right: 14px; */
+   left: 14px;
+   bottom: 30px;
+   cursor: pointer
+}
+
+.chat-btn .close {
+   display: none
+}
+
+.chat-btn i {
+   transition: all 0.9s ease
+}
+
+#check:checked~.chat-btn i {
+   display: block;
+   pointer-events: auto;
+   transform: rotate(180deg)
+}
+
+#check:checked~.chat-btn .comment {
+   display: none
+}
+
+.chat-btn i {
+   font-size: 22px;
+   color: #fff !important
+}
+
+.chat-btn {
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50px;
+   background-color: #25D366;
+   color: #fff;
+   font-size: 22px;
+   border: none
+}
+
+.wrapper {
+   position: fixed;
+   /* right: 20px; */
+   left: 20px;
+   bottom: 100px;
+   width: 300px;
+   background-color: #fff;
+   border-radius: 5px;
+   opacity: 0;
+   transition: all 0.4s
+}
+
+#check:checked~.wrapper {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.chatheader {
+   padding: 13px;
+   background-color: #25D366;
+   border-radius: 5px 5px 0px 0px;
+   margin-bottom: 10px;
+   color: #fff
+}
+
+
+
+
+.chat-form textarea {
+   resize: none
+}
+
+.form-control:focus,
+.btn:focus {
+   box-shadow: none
+}
+
+.btn,
+.btn:focus,
+.btn:hover {
+   background-color: #25D366;
+}
+
+#check {
+   display: none !important
+}
+
+
+/* Media qureies */
+
+@media screen and (max-width: 768px){
+   .floating-menu{
+      border: 2px solid yellow;
+      display: none;
+   }
+   
+}
